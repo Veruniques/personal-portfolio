@@ -1019,16 +1019,51 @@ window.NOROLL = {
       "type": "Brand & visual design",
       "client": "Various",
       "cover": "assets/img/work/cover-extras.jpg",
-      "hero": "assets/img/work/x-fameplay-0.jpg",
-      "heroAlt": "Fameplay brand elements",
+      "hero": "assets/img/work/x-fameplay-chrome-logo.jpg",
+      "heroAlt": "Chromatic Fameplay logo",
       "text": "The other half of the brain. Identities, campaign systems and posters, mostly for small teams that needed a whole brand, not just a logo.",
       "chapters": [
         {
           "id": "fameplay",
           "title": "Fameplay",
           "kicker": "AI studio brand & campaigns",
-          "text": "Brand elements, type, icon set, the Avatar Pioneers event series with HeyGen, and campaign visuals.",
+          "text": "Brand system and key visuals for the AI studio: the chromatic logo and humanoid, type, icon set, the Avatar Pioneers event series with HeyGen, and campaign visuals.",
           "images": [
+            {
+              "src": "assets/img/work/x-fameplay-chrome-logo.jpg",
+              "w": 1600,
+              "h": 982,
+              "alt": "Chromatic Fameplay logo with humanoid",
+              "size": "half"
+            },
+            {
+              "src": "assets/img/work/x-fameplay-chrome-logo2.jpg",
+              "w": 1600,
+              "h": 826,
+              "alt": "Chromatic Fameplay wordmark",
+              "size": "half"
+            },
+            {
+              "src": "assets/img/work/x-fameplay-humanoid.jpg",
+              "w": 1525,
+              "h": 1450,
+              "alt": "Chromatic humanoid, Fameplay key visual",
+              "size": "half"
+            },
+            {
+              "src": "assets/img/work/x-fameplay-store.jpg",
+              "w": 1600,
+              "h": 897,
+              "alt": "Fameplay campaign visual",
+              "size": "half"
+            },
+            {
+              "src": "assets/img/work/x-fameplay-face.jpg",
+              "w": 1600,
+              "h": 897,
+              "alt": "Fameplay AI campaign visual",
+              "size": "half"
+            },
             {
               "src": "assets/img/work/x-fameplay-0.jpg",
               "w": 1600,
