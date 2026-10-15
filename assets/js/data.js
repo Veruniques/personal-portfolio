@@ -1297,9 +1297,8 @@ window.NOROLL = {
     ],
     fameplay: 'I joined the team awarded the first Emmy Award in Czech history for the original series #marty_is_dead. I produce and create AI cinematic videos combining storytelling, art direction and advanced AI workflows, focused on visuals that elevate products, services and ideas beyond standard AI content.',
     tools: [
-      'ComfyUI', 'Weavy', 'Nano Banana Pro', 'Seedream Pro', 'LoRA', 'Midjourney',
-      'Topaz', 'Kling', 'Higgsfield', 'DaVinci Resolve', 'ElevenLabs', 'Photoshop',
-      'Figma', 'Webflow',
+      'ComfyUI', 'Weavy', 'Magnific', 'Higgsfield', 'Midjourney', 'LoRA', 'Topaz',
+      'DaVinci Resolve', 'ElevenLabs', 'Photoshop', 'Figma', 'Webflow', 'GitHub', 'Claude MCP',
     ],
   },
 };
