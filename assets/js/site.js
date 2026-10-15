@@ -30,7 +30,7 @@
   /* ---------------- desktop icons ---------------- */
   const all = [
     ...D.cinematic.map(p => ({ ...p, kind: 'cinematic' })),
-    ...D.product.map(p => ({ ...p, kind: 'product' })),
+    ...D.product.filter(p => !p.draft).map(p => ({ ...p, kind: 'product' })),
   ];
   const byId = Object.fromEntries(all.map(p => [p.id, p]));
 
@@ -249,10 +249,18 @@
         const o = typeof im === 'string' ? { src: im } : im;
         return `<img src="${o.src}" alt="${esc(o.alt || p.title + ' screen ' + (i + 1))}" loading="lazy" data-zoom${o.strip ? ' class="is-strip"' : ''}>`;
       }).join('');
+      const facts = p.facts ? `<div class="facts">${p.facts.map(([n, l]) => `<div><b>${esc(n)}</b><span>${esc(l)}</span></div>`).join('')}</div>` : '';
+      const quote = p.quote ? `<blockquote class="quote"><p>“${esc(p.quote.text)}”</p><cite>${esc(p.quote.who)}</cite></blockquote>` : '';
       body = `${head}
+        ${facts}
+        ${p.problem ? `<div class="info-text"><p class="lead"><b>The problem.</b> ${esc(p.problem)}</p></div>` : ''}
         <div class="info-text"><p>${esc(p.text)}</p></div>
-        ${details('Details', meta)}
-        ${p.role ? details('My role', list(p.role)) : ''}
+        ${p.approach ? details('What I did', list(p.approach)) : ''}
+        ${p.decisions ? details('Key decisions', list(p.decisions)) : ''}
+        ${p.outcome ? details('Outcome', list(p.outcome)) : ''}
+        ${quote}
+        ${details('Details', meta, false)}
+        ${p.role ? details('My role', list(p.role), false) : ''}
         ${p.challenges ? details('Product challenges', list(p.challenges), false) : ''}
         ${details('Preview', `<div class="preview-grid">${imgs}</div>`)}`;
     }
@@ -274,7 +282,7 @@
       </button>`).join('');
     const intro = kind === 'cinematic'
       ? `<div class="info-text" style="margin-bottom:10px"><p>${esc(D.about.fameplay)}</p></div>`
-      : `<div class="info-text" style="margin-bottom:10px"><p>Product design lead with a decade around products: design teams, research, design systems and the stubborn bits between business and engineering. Kiwi.com, Keboola, SinnerSchrader, Revolt BI.</p></div>`;
+      : `<div class="info-text" style="margin-bottom:10px"><p>Product design lead with a decade around products: design teams, research, design systems and the stubborn bits between business and engineering. Kiwi.com, Keboola, SinnerSchrader.</p></div>`;
     const win = createWindow({
       key: 'folder-' + kind,
       title: `<b>${kind === 'cinematic' ? 'Cinematic' : 'Product Design'}</b> — ${items.length} items`,
@@ -293,9 +301,11 @@
         <div class="emmy"><b>Fameplay.</b> ${esc(A.fameplay)}</div>`,
       cv: A.cv.map(r => `<div class="cv-row"><span>${esc(r.when)}</span><div>${esc(r.what)}<small>${esc(r.where)}</small></div></div>`).join('') +
         `<p style="margin-top:12px"><a href="${D.owner.linkedin}" target="_blank" rel="noopener">Full history on LinkedIn ↗</a></p>`,
+      refs: A.references.map(r => `<blockquote class="quote"><p>“${esc(r.text)}”</p><cite>${esc(r.who)}<small>${esc(r.role)}</small></cite></blockquote>`).join('') +
+        `<p style="margin-top:12px;color:var(--ink-soft)">Full reference letters available on request.</p>`,
       tools: `<p>From ComfyUI to Weavy and all the top-notch models. Tools are the crew. Direction is the job.</p><div class="tags">${A.tools.map(t => `<span>${esc(t)}</span>`).join('')}</div>`,
     };
-    const tabs = [['about', 'About me', ''], ['cv', 'CV', String(new Date().getFullYear() - 2018) + ' yrs'], ['tools', 'Tools', A.tools.length]];
+    const tabs = [['about', 'About me', ''], ['cv', 'CV', String(new Date().getFullYear() - 2018) + ' yrs'], ['refs', 'References', A.references.length], ['tools', 'Tools', A.tools.length]];
     const body = `<div class="split">
       <div class="split__side" role="tablist">${tabs.map(([k, l, n]) => `<button role="tab" data-tab="${k}" aria-selected="${k === tab}">${l}<small>${n}</small></button>`).join('')}</div>
       <div class="split__main" id="about-pane">${panes[tab]}</div></div>`;
