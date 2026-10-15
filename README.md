@@ -10,7 +10,7 @@ Plain HTML/CSS/JS, no build step. Hosted on GitHub Pages.
 Everything lives in `assets/js/data.js`:
 
 - `cinematic` — video projects (Vimeo IDs, text, desktop position `x`/`y` in %)
-- `product` — case studies (cover, images, text, role)
+- `product` — case studies: hero, overview, `chapters[]` with galleries (`size`: full|half|third, `full` = full-length page for the lightbox). Images in `assets/img/work/`.
 - `about` — intro, CV, tools
 
 Images go in `assets/img/`. Keep them under ~400 KB (JPG, max 1600 px wide).

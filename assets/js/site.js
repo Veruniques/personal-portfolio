@@ -173,6 +173,7 @@
     const anchor = side === 'right' ? vw - w - vw * 0.08 - step : vw * 0.08 + step;
     let left = Math.max(12, Math.min(vw - w - 12, anchor));
     let top = Math.max(40, Math.min(vh - h - 90, 56 + step));
+    if (cls.includes('win--case')) { left = Math.max(12, (vw - w) / 2); top = 38; }
     if (cls.includes('win--dialog')) { left = (vw - w) / 2 + (Math.random() * 120 - 60); top = vh * 0.28 + (Math.random() * 80 - 40); }
     win.style.left = left + 'px';
     win.style.top = top + 'px';
@@ -230,10 +231,13 @@
   const list = items => `<ul class="dash-list">${items.map(i => `<li>${esc(i)}</li>`).join('')}</ul>`;
   const details = (label, inner, isOpen = true) => `<details class="disclosure" ${isOpen ? 'open' : ''}><summary>${label}:</summary><div class="disclosure__body">${inner}</div></details>`;
 
-  function openProject(id) {
+  function openProject(ref) {
+    const target = (D.redirects && D.redirects[ref]) || ref;
+    const [id, chapter] = String(target).split('/');
     const p = byId[id];
     if (!p) return;
     history.replaceState(null, '', '#' + id);
+    if (p.kind === 'product' && p.chapters) return openCase(p, chapter);
     const head = `<div class="info-head"><div class="info-head__thumb" data-thumb="${p.id}" style='background-image:${bg(p.kind === 'cinematic' ? vimeoThumb(p.vimeo) : p.cover, p.id)}'></div><div><h2>${esc(p.title)}</h2><p>${esc(p.subtitle)}</p></div></div>`;
     const meta = `<dl class="kv"><dt>Type:</dt><dd>${esc(p.type)}</dd><dt>Client:</dt><dd>${esc(p.client)}</dd></dl>`;
 
@@ -272,6 +276,55 @@
     }));
   }
 
+  /* big case-study window: hero, overview, chapter nav, galleries */
+  function openCase(p, chapter) {
+    const fig = o => `<figure class="g g--${o.size || 'full'}"><img src="${o.src}"${o.w ? ` width="${o.w}" height="${o.h}"` : ''} alt="${esc(o.alt || p.title)}" loading="lazy" decoding="async" data-zoom${o.full ? ` data-full="${o.full}"` : ''}>${o.full ? '<span class="g__more">Full page ↗</span>' : ''}</figure>`;
+    const facts = p.facts ? `<div class="facts">${p.facts.map(([n, l]) => `<div><b>${esc(n)}</b><span>${esc(l)}</span></div>`).join('')}</div>` : '';
+    const quote = p.quote ? `<blockquote class="quote"><p>“${esc(p.quote.text)}”</p><cite>${esc(p.quote.who)}</cite></blockquote>` : '';
+    const nav = `<nav class="case__nav" aria-label="Chapters"><button data-jump="overview">Overview</button>${p.chapters.map(c => `<button data-jump="${c.id}">${esc(c.title)}</button>`).join('')}</nav>`;
+    const chapters = p.chapters.map((c, i) => `
+      <section class="chapter" id="ch-${p.id}-${c.id}">
+        <header class="chapter__head"><span class="chapter__no">${String(i + 1).padStart(2, '0')}</span><div><h3>${esc(c.title)}</h3>${c.kicker ? `<p>${esc(c.kicker)}</p>` : ''}</div></header>
+        ${c.text ? `<p class="chapter__text">${esc(c.text)}</p>` : ''}
+        ${c.list ? `<ul class="dash-list chapter__list">${c.list.map(l => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}
+        <div class="gallery">${c.images.map(fig).join('')}</div>
+      </section>`).join('');
+    const body = `<div class="win__body case">
+      ${p.hero ? `<img class="case__hero" src="${p.hero}" alt="${esc(p.heroAlt || p.title)}" data-zoom>` : ''}
+      <header class="case__head"><div><h2>${esc(p.title)}</h2><p>${esc(p.subtitle)}</p></div><dl class="kv"><dt>Type</dt><dd>${esc(p.type)}</dd><dt>Client</dt><dd>${esc(p.client)}</dd></dl></header>
+      ${nav}
+      <section class="chapter chapter--overview" id="ch-${p.id}-overview">
+        ${facts}
+        <div class="case__intro">
+          ${p.problem ? `<p class="lead"><b>The problem.</b> ${esc(p.problem)}</p>` : ''}
+          <p>${esc(p.text)}</p>
+        </div>
+        ${p.decisions ? details('Key decisions', list(p.decisions)) : ''}
+        ${p.role ? details('My role', list(p.role), false) : ''}
+        ${quote}
+      </section>
+      ${chapters}
+    </div>`;
+    const win = createWindow({ key: p.id, title: `Information about: <b>${esc(p.title)}</b>`, body, raw: true, cls: 'win--case' });
+    const scroller = $('.case', win);
+    $$('[data-jump]', win).forEach(b => b.addEventListener('click', () => {
+      const t = $(`#ch-${p.id}-${b.dataset.jump}`, win);
+      if (t) scroller.scrollTo({ top: t.offsetTop - 56, behavior: 'smooth' });
+    }));
+    // highlight current chapter in the nav
+    const secs = $$('.chapter', win);
+    scroller.addEventListener('scroll', () => {
+      let cur = secs[0];
+      secs.forEach(s => { if (s.offsetTop - 80 <= scroller.scrollTop) cur = s; });
+      $$('[data-jump]', win).forEach(b => b.classList.toggle('is-on', cur.id.endsWith('-' + b.dataset.jump)));
+    }, { passive: true });
+    if (chapter) {
+      const go = () => { const t = $(`#ch-${p.id}-${chapter}`, win); if (t) scroller.scrollTop = t.offsetTop - 56; };
+      requestAnimationFrame(go); setTimeout(go, 400); $('.case__hero', win)?.addEventListener('load', go, { once: true });
+    }
+    $$('img', win).forEach(img => img.addEventListener('error', () => { img.closest('figure')?.remove(); }));
+  }
+
   function openFolder(kind) {
     const items = all.filter(p => p.kind === kind);
     const rows = items.map(p => `
@@ -282,7 +335,7 @@
       </button>`).join('');
     const intro = kind === 'cinematic'
       ? `<div class="info-text" style="margin-bottom:10px"><p>${esc(D.about.fameplay)}</p></div>`
-      : `<div class="info-text" style="margin-bottom:10px"><p>Product design lead with a decade around products: design teams, research, design systems and the stubborn bits between business and engineering. Kiwi.com, Keboola, SinnerSchrader.</p></div>`;
+      : `<div class="info-text" style="margin-bottom:10px"><p>Product design lead with a decade around products: design teams, research, design systems and the stubborn bits between business and engineering. Hundreds of screens for Kiwi.com, Keboola and PFLB, plus brands on the side.</p></div>`;
     const win = createWindow({
       key: 'folder-' + kind,
       title: `<b>${kind === 'cinematic' ? 'Cinematic' : 'Product Design'}</b> — ${items.length} items`,
@@ -397,14 +450,17 @@
     const img = e.target.closest('img[data-zoom]');
     if (!img) return;
     const lb = document.createElement('div');
-    lb.className = 'lightbox';
-    lb.innerHTML = `<img src="${img.currentSrc || img.src}" alt="${esc(img.alt)}">`;
-    lb.addEventListener('click', () => lb.remove());
+    const full = img.dataset.full;
+    lb.className = 'lightbox' + (full ? ' lightbox--page' : '');
+    lb.innerHTML = `<img src="${full || img.currentSrc || img.src}" alt="${esc(img.alt)}">${full ? '<button class="lightbox__close" aria-label="Close">×</button>' : ''}`;
+    lb.addEventListener('click', ev => { if (!full || ev.target === lb || ev.target.closest('.lightbox__close')) lb.remove(); });
+    document.addEventListener('keydown', function k(ev) { if (ev.key === 'Escape') { lb.remove(); document.removeEventListener('keydown', k); } });
     document.body.appendChild(lb);
   });
 
-  // deep links: noroll.studio/#keboola
-  const hash = location.hash.slice(1);
-  if (byId[hash]) openProject(hash);
+  // deep links: noroll.studio/#keboola, #kiwi/fare-families, old ids redirect
+  const hash = decodeURIComponent(location.hash.slice(1));
+  const hid = ((D.redirects && D.redirects[hash]) || hash).split('/')[0];
+  if (byId[hid]) openProject(hash);
   else if (openers[hash]) openers[hash]();
 })();
