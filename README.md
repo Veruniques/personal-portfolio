@@ -1,4 +1,4 @@
-# noroll.studio
+# Personal portfolio
 
 Portfolio of Veronika Dominiková: AI cinematic production + product design (UX/UI).
 A macOS-style desktop: projects are icons, each opens as an "Information about" window.
