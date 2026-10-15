@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>noroll.studio — Veronika Dominiková</title>
+  <meta name="description" content="Veronika Dominiková — AI cinematic production and product design (UX/UI). Creative director behind NO ROLL studio.">
+  <meta property="og:title" content="noroll.studio">
+  <meta property="og:description" content="AI cinematic production and product design by Veronika Dominiková.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <div class="wallpaper" aria-hidden="true"></div>
+
+  <header class="menubar">
+    <div class="menubar__left">
+      <img class="menubar__logo" src="assets/img/favicon.svg" alt="" width="15" height="15">
+      <strong>noroll.studio</strong>
+      <button class="menubar__item" data-filter="all" aria-pressed="true">All</button>
+      <button class="menubar__item" data-filter="cinematic">Cinematic</button>
+      <button class="menubar__item" data-filter="product">Product Design</button>
+      <button class="menubar__item" data-open="about">About</button>
+      <button class="menubar__item" data-open="contact">Contact</button>
+    </div>
+    <div class="menubar__right">
+      <span class="menubar__status">Available for work</span>
+      <time class="menubar__clock" id="clock"></time>
+    </div>
+  </header>
+
+  <main class="desktop" id="desktop" aria-label="Projects">
+    <!-- icons injected by site.js -->
+  </main>
+
+  <div class="windows" id="windows"></div>
+
+  <nav class="dock" aria-label="Dock">
+    <button class="dock__app" data-open="folder-cinematic" data-label="Cinematic"><span class="ic ic--film">▶</span></button>
+    <button class="dock__app" data-open="folder-product" data-label="Product Design"><span class="ic ic--ux">UX</span></button>
+    <span class="dock__sep"></span>
+    <button class="dock__app" data-joke="comfy" data-label="ComfyUI"><span class="ic ic--comfy">Cf</span></button>
+    <button class="dock__app" data-joke="mj" data-label="Midjourney"><span class="ic ic--mj">Mj</span></button>
+    <button class="dock__app" data-joke="figma" data-label="Figma"><span class="ic ic--fg">Fg</span></button>
+    <button class="dock__app" data-joke="dice" data-label="Random generate"><span class="ic ic--dice">⚄</span></button>
+    <span class="dock__sep"></span>
+    <button class="dock__app" data-open="about" data-label="About me"><span class="ic ic--notes"><i></i><i></i><i></i></span></button>
+    <button class="dock__app" data-open="photos" data-label="Portraits"><span class="ic ic--photos"></span></button>
+    <span class="dock__sep"></span>
+    <a class="dock__app" href="https://www.linkedin.com/in/veronika-dominikova/" target="_blank" rel="noopener" data-label="LinkedIn"><span class="ic ic--in">in</span></a>
+    <button class="dock__app" data-open="contact" data-label="Contact"><span class="ic ic--mail">✉</span></button>
+    <span class="dock__sep"></span>
+    <button class="dock__app" data-open="bin" data-label="Bin of rejected rolls"><span class="ic ic--bin"></span></button>
+  </nav>
+
+  <noscript>
+    <div class="noscript">
+      <h1>Veronika Dominiková — noroll.studio</h1>
+      <p>AI cinematic production and product design. Turn on JavaScript to open the desktop.</p>
+    </div>
+  </noscript>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
