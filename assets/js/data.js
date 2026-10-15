@@ -130,6 +130,7 @@ window.NOROLL = {
         'assets/img/keboola-1.jpg',
         'assets/img/keboola-2.jpg',
         'assets/img/keboola-3.jpg',
+        'assets/img/keboola-4.jpg',
       ],
       text: 'Keboola brings people together from Excel to AI with lightning speed. When I joined there was no research, no data tracking, no data collecting. I built a data-driven product process from zero, ran user research and shipped UI 2.0: a new dashboard, project overview and data catalog that works for data engineers and newcomers alike.',
       role: [
@@ -158,6 +159,7 @@ window.NOROLL = {
         'assets/img/revolt-1.jpg',
         'assets/img/revolt-2.jpg',
         'assets/img/revolt-3.jpg',
+        'assets/img/revolt-4.jpg',
       ],
       text: 'A 1920×1080 touch app for Revolt BI events and showrooms. Visitors answer a few quick questions about their business and the screen serves them matching reports, use cases and references. Screensaver, questionnaire, report gallery and detail views, all designed to be read from three metres away.',
       x: 84, y: 60,

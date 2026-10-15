@@ -9,7 +9,9 @@
   const isMobile = () => matchMedia('(max-width: 760px)').matches;
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  const vimeoThumb = id => `https://vumbnail.com/${id}.jpg`;
+  // Vimeo thumbnails come from Vimeo's own oEmbed (CORS-enabled); gradient until they arrive
+  const thumbs = {};
+  const vimeoThumb = id => thumbs[id] || '';
   const fallbackBg = (seed) => {
     const hues = [152, 210, 28, 330, 260, 190];
     const h = hues[seed.length % hues.length];
@@ -83,6 +85,17 @@
     open: () => openProject(p.id),
   }));
 
+  D.cinematic.forEach(p => {
+    fetch(`https://vimeo.com/api/oembed.json?url=${encodeURIComponent('https://vimeo.com/' + p.vimeo)}&width=640`)
+      .then(r => r.ok ? r.json() : null)
+      .then(j => {
+        if (!j || !j.thumbnail_url) return;
+        thumbs[p.vimeo] = j.thumbnail_url;
+        $$(`[data-id="${p.id}"] .icon__thumb`).forEach(t => { t.style.backgroundImage = bg(j.thumbnail_url, p.id); });
+      })
+      .catch(() => {});
+  });
+
   /* select / drag / double-click */
   let selected = null;
   function select(el) {
@@ -139,7 +152,7 @@
 
   function focusWin(win) { win.style.zIndex = ++z; }
 
-  function createWindow({ key, title, body, cls = '', raw = false }) {
+  function createWindow({ key, title, body, cls = '', raw = false, side = 'left' }) {
     if (open.has(key)) { const w = open.get(key); focusWin(w); return w; }
     const win = document.createElement('section');
     win.className = `win ${cls}`;
@@ -157,7 +170,8 @@
     const w = win.offsetWidth, h = win.offsetHeight;
     const vw = innerWidth, vh = innerHeight;
     const step = (cascade++ % 6) * 28;
-    let left = Math.max(12, Math.min(vw - w - 12, vw * 0.18 + step));
+    const anchor = side === 'right' ? vw - w - vw * 0.08 - step : vw * 0.08 + step;
+    let left = Math.max(12, Math.min(vw - w - 12, anchor));
     let top = Math.max(40, Math.min(vh - h - 90, 56 + step));
     if (cls.includes('win--dialog')) { left = (vw - w) / 2 + (Math.random() * 120 - 60); top = vh * 0.28 + (Math.random() * 80 - 40); }
     win.style.left = left + 'px';
@@ -242,7 +256,7 @@
         ${p.challenges ? details('Product challenges', list(p.challenges), false) : ''}
         ${details('Preview', `<div class="preview-grid">${imgs}</div>`)}`;
     }
-    const win = createWindow({ key: id, title: `Information about: <b>${esc(p.title)}</b>`, body, cls: p.kind === 'product' ? 'win--wide' : '' });
+    const win = createWindow({ key: id, title: `Information about: <b>${esc(p.title)}</b>`, body, cls: p.kind === 'product' ? 'win--wide' : '', side: p.kind === 'product' ? 'left' : 'right' });
     $$('img', win).forEach(img => img.addEventListener('error', () => {
       const ph = document.createElement('div');
       ph.className = 'ph'; ph.textContent = 'Image coming soon';

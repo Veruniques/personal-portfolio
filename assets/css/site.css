@@ -338,6 +338,11 @@ img { display: block; max-width: 100%; }
   }
   .icon { position: static; width: auto; }
   .desk-caption { position: static; grid-column: 1 / -1; margin-top: 6px; }
+  .icon--folder { display: none; }
+  .desk-caption[data-kind="cinematic"] { order: 0; }
+  .icon[data-kind="cinematic"] { order: 1; }
+  .desk-caption[data-kind="product"] { order: 2; margin-top: 18px; }
+  .icon[data-kind="product"] { order: 3; }
   .windows { position: fixed; }
   .win, .win--wide, .win--small {
     left: 8px !important; right: 8px; top: calc(var(--menubar-h) + 8px) !important;
