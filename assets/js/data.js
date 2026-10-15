@@ -137,25 +137,29 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kiwi-journey-desktop.jpg",
-"w": 2000, "h": 166,
+              "w": 2000,
+              "h": 166,
               "alt": "Desktop and responsive customer journey map, full width",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-journey-native.jpg",
-"w": 2000, "h": 250,
+              "w": 2000,
+              "h": 250,
               "alt": "Native app customer journey map, full width",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-journey-search.jpg",
-"w": 2000, "h": 580,
+              "w": 2000,
+              "h": 580,
               "alt": "Journey map detail: search and homepage touchpoints",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-journey-booking.jpg",
-"w": 2000, "h": 382,
+              "w": 2000,
+              "h": 382,
               "alt": "Journey map detail: booking touchpoints",
               "size": "full"
             }
@@ -169,13 +173,15 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kiwi-booking-flow.jpg",
-"w": 2000, "h": 748,
+              "w": 2000,
+              "h": 748,
               "alt": "Mobile booking flow: search, trip details, ticket fare, baggage, services, summary",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-desktop-home.jpg",
-"w": 1722, "h": 1134,
+              "w": 1722,
+              "h": 1134,
               "alt": "Desktop homepage and search results",
               "size": "full"
             }
@@ -189,31 +195,36 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kiwi-bundles-mobile.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "Bundle selection on mobile: Light, Comfort, All in, discount prompt",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-bundles-desktop.jpg",
-"w": 1722, "h": 1214,
+              "w": 1722,
+              "h": 1214,
               "alt": "Bundles on desktop with comparison modal",
               "size": "half"
             },
             {
               "src": "assets/img/work/kiwi-bundles-seatmap.jpg",
-"w": 1260, "h": 1158,
+              "w": 1260,
+              "h": 1158,
               "alt": "Seat map with seats included in the bundle",
               "size": "half"
             },
             {
               "src": "assets/img/work/kiwi-bundles-upgrades.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "Bundle upgrade offers triggered by bag selection",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-seating-bags.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "Seating and baggage screens",
               "size": "full"
             }
@@ -233,31 +244,36 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kiwi-ff-desktop.jpg",
-"w": 1722, "h": 1214,
+              "w": 1722,
+              "h": 1214,
               "alt": "Fare family comparison and recommended-fare modal on desktop",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-ff-mobile.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "Fare families and Kiwi.com services on mobile",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-ff-desktop2.jpg",
-"w": 1722, "h": 1214,
+              "w": 1722,
+              "h": 1214,
               "alt": "Desktop service packages and fare details",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-ff-postbooking.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "Post-booking: trip overview, changes, rebooking",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-ff-refunds.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "Refunds, price breakdown and checkout",
               "size": "full"
             }
@@ -271,19 +287,22 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kiwi-insurance.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "AXA travel insurance on mobile",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-protection.jpg",
-"w": 2000, "h": 888,
+              "w": 2000,
+              "h": 888,
               "alt": "Kiwi.com Guarantee, AirHelp and insurance in Manage My Booking",
               "size": "full"
             },
             {
               "src": "assets/img/work/kiwi-insurance-desktop.jpg",
-"w": 1260, "h": 1394,
+              "w": 1260,
+              "h": 1394,
               "alt": "Insurance step on desktop",
               "size": "full"
             }
@@ -297,19 +316,22 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kiwi-components.jpg",
-"w": 1800, "h": 1579,
+              "w": 1800,
+              "h": 1579,
               "alt": "Ancillary component set: baggage, seating, lounges, accommodation, car rental",
               "size": "half"
             },
             {
               "src": "assets/img/work/kiwi-emails.jpg",
-"w": 1800, "h": 1771,
+              "w": 1800,
+              "h": 1771,
               "alt": "Booking confirmation email templates",
               "size": "half"
             },
             {
               "src": "assets/img/work/kiwi-boarding.jpg",
-"w": 1800, "h": 1138,
+              "w": 1800,
+              "h": 1138,
               "alt": "Boarding documents email templates",
               "size": "full"
             }
@@ -363,73 +385,85 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kbc-ux-17.jpg",
-"w": 1436, "h": 1276,
+              "w": 1436,
+              "h": 1276,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-12.jpg",
-"w": 1400, "h": 1244,
+              "w": 1400,
+              "h": 1244,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-0.jpg",
-"w": 1400, "h": 944,
+              "w": 1400,
+              "h": 944,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-4.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-6.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-8.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-9.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-18.jpg",
-"w": 1400, "h": 1244,
+              "w": 1400,
+              "h": 1244,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-23.jpg",
-"w": 1400, "h": 1299,
+              "w": 1400,
+              "h": 1299,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-25.jpg",
-"w": 1400, "h": 1394,
+              "w": 1400,
+              "h": 1394,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-32.jpg",
-"w": 1400, "h": 957,
+              "w": 1400,
+              "h": 957,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-ux-33.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola UI 2.0 screen",
               "size": "half"
             }
@@ -443,37 +477,43 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kbc-old-1.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola storage screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-old-2.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola storage screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-old-3.jpg",
-"w": 1400, "h": 1108,
+              "w": 1400,
+              "h": 1108,
               "alt": "Keboola storage screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-old-4.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola storage screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-old-9.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola storage screen",
               "size": "half"
             },
             {
               "src": "assets/img/work/kbc-old-12.jpg",
-"w": 1400, "h": 1053,
+              "w": 1400,
+              "h": 1053,
               "alt": "Keboola storage screen",
               "size": "half"
             }
@@ -487,217 +527,248 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kbc-web-0.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-0-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-6.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-6-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-9.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-9-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-15.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-15-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-17.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-17-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-19.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-19-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-24.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-24-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-32.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-32-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-33.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-33-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-34.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-34-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-35.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-35-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-37.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-37-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-38.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-38-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-42.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-42-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-43.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-43-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-44.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-44-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-45.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-45-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-46.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-46-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-47.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-47-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-49.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-49-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-50.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-50-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-54.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-54-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-56.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-56-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-57.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-57-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-63.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-63-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-66.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-66-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-67.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-67-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-70.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-70-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-71.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-71-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-72.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-72-full.jpg"
             },
             {
               "src": "assets/img/work/kbc-web-73.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "Keboola website page",
               "size": "third",
               "full": "assets/img/work/kbc-web-73-full.jpg"
@@ -712,13 +783,15 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/kbc-campaign.jpg",
-"w": 2000, "h": 1237,
+              "w": 2000,
+              "h": 1237,
               "alt": "Keboola campaign visuals",
               "size": "full"
             },
             {
               "src": "assets/img/work/kbc-illustration-pack.jpg",
-"w": 2000, "h": 2036,
+              "w": 2000,
+              "h": 2036,
               "alt": "Keboola illustration pack",
               "size": "full"
             }
@@ -762,126 +835,144 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/pflb-home.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Homepage",
               "size": "third",
               "full": "assets/img/work/pflb-home-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-platform.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Platform",
               "size": "third",
               "full": "assets/img/work/pflb-platform-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-solutions.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Solutions",
               "size": "third",
               "full": "assets/img/work/pflb-solutions-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-pricing.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Pricing",
               "size": "third",
               "full": "assets/img/work/pflb-pricing-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-features.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Features",
               "size": "third",
               "full": "assets/img/work/pflb-features-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-why.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Why PFLB",
               "size": "third",
               "full": "assets/img/work/pflb-why-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-enterprise.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Enterprise",
               "size": "third",
               "full": "assets/img/work/pflb-enterprise-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-howwework.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: How we work",
               "size": "third",
               "full": "assets/img/work/pflb-howwework-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-service.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Service template",
               "size": "third",
               "full": "assets/img/work/pflb-service-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-docs.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Documentation",
               "size": "third",
               "full": "assets/img/work/pflb-docs-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-tutorials.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Tutorials",
               "size": "third",
               "full": "assets/img/work/pflb-tutorials-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-releases.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Releases",
               "size": "third",
               "full": "assets/img/work/pflb-releases-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-blog.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Blog",
               "size": "third",
               "full": "assets/img/work/pflb-blog-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-article.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Article",
               "size": "third",
               "full": "assets/img/work/pflb-article-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-contacts.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Contacts",
               "size": "third",
               "full": "assets/img/work/pflb-contacts-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-signup.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Sign up",
               "size": "third",
               "full": "assets/img/work/pflb-signup-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-getintouch.jpg",
-"w": 900, "h": 1125,
+              "w": 900,
+              "h": 1125,
               "alt": "PFLB website: Get in touch",
               "size": "third",
               "full": "assets/img/work/pflb-getintouch-full.jpg"
             },
             {
               "src": "assets/img/work/pflb-menu.jpg",
-"w": 900, "h": 880,
+              "w": 900,
+              "h": 880,
               "alt": "PFLB website: Mega menu",
               "size": "third",
               "full": "assets/img/work/pflb-menu-full.jpg"
@@ -896,19 +987,22 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/pflb-1.jpg",
-"w": 1139, "h": 1050,
+              "w": 1139,
+              "h": 1050,
               "alt": "Load profile editor with live load-shape preview",
               "size": "half"
             },
             {
               "src": "assets/img/pflb-2.jpg",
-"w": 1195, "h": 1000,
+              "w": 1195,
+              "h": 1000,
               "alt": "Reports list with filters and labels",
               "size": "half"
             },
             {
               "src": "assets/img/pflb-3.jpg",
-"w": 966, "h": 352,
+              "w": 966,
+              "h": 352,
               "alt": "Client platform flow",
               "size": "full"
             }
@@ -937,61 +1031,71 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/x-fameplay-0.jpg",
-"w": 1600, "h": 3222,
+              "w": 1600,
+              "h": 3222,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-1.jpg",
-"w": 1600, "h": 3389,
+              "w": 1600,
+              "h": 3389,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-19.jpg",
-"w": 1600, "h": 3636,
+              "w": 1600,
+              "h": 3636,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-20.jpg",
-"w": 1600, "h": 1439,
+              "w": 1600,
+              "h": 1439,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-23.jpg",
-"w": 1600, "h": 836,
+              "w": 1600,
+              "h": 836,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-27.jpg",
-"w": 1600, "h": 836,
+              "w": 1600,
+              "h": 836,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-43.jpg",
-"w": 1418, "h": 1418,
+              "w": 1418,
+              "h": 1418,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-44.jpg",
-"w": 1600, "h": 2125,
+              "w": 1600,
+              "h": 2125,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-45.jpg",
-"w": 1600, "h": 2125,
+              "w": 1600,
+              "h": 2125,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-fameplay-51.jpg",
-"w": 1600, "h": 1600,
+              "w": 1600,
+              "h": 1600,
               "alt": "Fameplay brand and campaign visual",
               "size": "third"
             }
@@ -1005,61 +1109,71 @@ window.NOROLL = {
           "images": [
             {
               "src": "assets/img/work/x-kurnik-0.jpg",
-"w": 1600, "h": 1602,
+              "w": 1600,
+              "h": 1602,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-3.jpg",
-"w": 1600, "h": 900,
+              "w": 1600,
+              "h": 900,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-4.jpg",
-"w": 1600, "h": 900,
+              "w": 1600,
+              "h": 900,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-7.jpg",
-"w": 1600, "h": 1600,
+              "w": 1600,
+              "h": 1600,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-18.jpg",
-"w": 1600, "h": 2000,
+              "w": 1600,
+              "h": 2000,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-21.jpg",
-"w": 1600, "h": 1680,
+              "w": 1600,
+              "h": 1680,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-24.jpg",
-"w": 1600, "h": 1680,
+              "w": 1600,
+              "h": 1680,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-34.jpg",
-"w": 1600, "h": 1035,
+              "w": 1600,
+              "h": 1035,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-40.jpg",
-"w": 1600, "h": 2845,
+              "w": 1600,
+              "h": 2845,
               "alt": "Kurník Šopa identity",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-kurnik-41.jpg",
-"w": 1600, "h": 2845,
+              "w": 1600,
+              "h": 2845,
               "alt": "Kurník Šopa identity",
               "size": "third"
             }
@@ -1069,86 +1183,27 @@ window.NOROLL = {
           "id": "peaq",
           "title": "Beyond PEAQ",
           "kicker": "Outdoor brand concept",
-          "text": "Wayfinding icons, ski-touring posters and social for an outdoor lifestyle brand.",
+          "text": "Social and campaign visuals for an outdoor lifestyle brand.",
           "images": [
             {
-              "src": "assets/img/work/x-peaq-2.jpg",
-"w": 1600, "h": 2264,
-              "alt": "Beyond PEAQ visual",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-peaq-7.jpg",
-"w": 1600, "h": 2262,
-              "alt": "Beyond PEAQ visual",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-peaq-9.jpg",
-"w": 1600, "h": 2262,
-              "alt": "Beyond PEAQ visual",
-              "size": "third"
-            },
-            {
               "src": "assets/img/work/x-peaq-20.jpg",
-"w": 1600, "h": 2134,
+              "w": 1600,
+              "h": 2134,
               "alt": "Beyond PEAQ visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-peaq-22.jpg",
-"w": 1600, "h": 2134,
+              "w": 1600,
+              "h": 2134,
               "alt": "Beyond PEAQ visual",
               "size": "third"
             },
             {
               "src": "assets/img/work/x-peaq-26.jpg",
-"w": 1600, "h": 2134,
+              "w": 1600,
+              "h": 2134,
               "alt": "Beyond PEAQ visual",
-              "size": "third"
-            }
-          ]
-        },
-        {
-          "id": "futurelife",
-          "title": "FutureLife",
-          "kicker": "Patient experience framework",
-          "text": "Process visuals, a patient-experience dashboard and brand marks.",
-          "images": [
-            {
-              "src": "assets/img/work/x-futurelife-2.jpg",
-"w": 1600, "h": 900,
-              "alt": "FutureLife visual",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-futurelife-18.jpg",
-"w": 1600, "h": 900,
-              "alt": "FutureLife visual",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-futurelife-20.jpg",
-"w": 1600, "h": 1753,
-              "alt": "FutureLife visual",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-futurelife-22.jpg",
-"w": 997, "h": 960,
-              "alt": "FutureLife visual",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-futurelife-25.jpg",
-"w": 1600, "h": 1040,
-              "alt": "FutureLife visual",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-futurelife-34.jpg",
-"w": 1600, "h": 1040,
-              "alt": "FutureLife visual",
               "size": "third"
             }
           ]
