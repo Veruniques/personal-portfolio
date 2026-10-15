@@ -1255,9 +1255,9 @@ window.NOROLL = {
   /* ---------------- ABOUT ---------------- */
   about: {
     intro: [
-      'I believe that design approached with modern technology and creativeness is a masterpiece. Carrying that in my mind, I design digital products, apps and websites across many fields, and lately I direct AI films.',
-      'Being born and raised in a business environment while owning a company, I know product development, team approach and methodology (agile), client-facing work and leadership from the inside.',
-      'In the field since 2018.',
+      'I design digital products, apps and websites. Lately I also direct AI films. Same job, different render time: make it work, then make it look like nobody struggled.',
+      'I was raised in a business environment and later ran my own company, so product development, agile, client calls and leading teams aren’t things I read about. They’re things I’ve survived.',
+      'In the field since 2018. Still curious. Slightly less patient.',
     ],
     canDo: [
       'AI cinematic production',
