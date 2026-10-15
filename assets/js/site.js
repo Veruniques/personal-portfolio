@@ -91,7 +91,7 @@
       .then(j => {
         if (!j || !j.thumbnail_url) return;
         thumbs[p.vimeo] = j.thumbnail_url;
-        $$(`[data-id="${p.id}"] .icon__thumb`).forEach(t => { t.style.backgroundImage = bg(j.thumbnail_url, p.id); });
+        $$(`[data-id="${p.id}"] .icon__thumb, [data-thumb="${p.id}"]`).forEach(t => { t.style.backgroundImage = bg(j.thumbnail_url, p.id); });
       })
       .catch(() => {});
   });
@@ -234,7 +234,7 @@
     const p = byId[id];
     if (!p) return;
     history.replaceState(null, '', '#' + id);
-    const head = `<div class="info-head"><div class="info-head__thumb" style='background-image:${bg(p.kind === 'cinematic' ? vimeoThumb(p.vimeo) : p.cover, p.id)}'></div><div><h2>${esc(p.title)}</h2><p>${esc(p.subtitle)}</p></div></div>`;
+    const head = `<div class="info-head"><div class="info-head__thumb" data-thumb="${p.id}" style='background-image:${bg(p.kind === 'cinematic' ? vimeoThumb(p.vimeo) : p.cover, p.id)}'></div><div><h2>${esc(p.title)}</h2><p>${esc(p.subtitle)}</p></div></div>`;
     const meta = `<dl class="kv"><dt>Type:</dt><dd>${esc(p.type)}</dd><dt>Client:</dt><dd>${esc(p.client)}</dd></dl>`;
 
     let body;
@@ -268,7 +268,7 @@
     const items = all.filter(p => p.kind === kind);
     const rows = items.map(p => `
       <button class="finder__row" data-go="${p.id}">
-        <span class="finder__thumb" style='background-image:${bg(kind === 'cinematic' ? vimeoThumb(p.vimeo) : p.cover, p.id)}'></span>
+        <span class="finder__thumb" data-thumb="${p.id}" style='background-image:${bg(kind === 'cinematic' ? vimeoThumb(p.vimeo) : p.cover, p.id)}'></span>
         <span>${esc(p.title)}<br><small>${esc(p.subtitle)}</small></span>
         <small>${kind === 'cinematic' ? 'Video' : 'Case study'}</small>
       </button>`).join('');
