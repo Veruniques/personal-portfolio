@@ -1152,32 +1152,6 @@ window.NOROLL = {
               "size": "third"
             }
           ]
-        },
-        {
-          "id": "posters",
-          "title": "Posters & editorial",
-          "kicker": "",
-          "text": "",
-          "images": [
-            {
-              "src": "assets/img/work/x-pocketed-9.jpg",
-"w": 700, "h": 700,
-              "alt": "Poster and editorial design",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-pocketed-48.jpg",
-"w": 772, "h": 1646,
-              "alt": "Poster and editorial design",
-              "size": "third"
-            },
-            {
-              "src": "assets/img/work/x-pocketed-49.jpg",
-"w": 1600, "h": 1200,
-              "alt": "Poster and editorial design",
-              "size": "third"
-            }
-          ]
         }
       ],
       "x": 84,
