@@ -403,7 +403,9 @@ window.NOROLL = {
                 }
               ]
             }
-          ]
+          ],
+          "highlight": true,
+          "teaser": "How I think: one feature, from the ticket and benchmark to design critique and the call we made."
         },
         {
           "id": "protection",

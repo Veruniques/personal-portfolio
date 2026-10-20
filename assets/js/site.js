@@ -283,9 +283,14 @@
     const fig = o => `<figure class="g g--${o.size || 'full'}"><img src="${o.src}"${o.w ? ` width="${o.w}" height="${o.h}"` : ''} alt="${esc(o.alt || p.title)}" loading="lazy" decoding="async" data-zoom${o.full ? ` data-full="${o.full}"` : ''}>${o.full ? '<span class="g__more">Full page ↗</span>' : ''}</figure>`;
     const facts = p.facts ? `<div class="facts">${p.facts.map(([n, l]) => `<div><b>${esc(n)}</b><span>${esc(l)}</span></div>`).join('')}</div>` : '';
     const quote = p.quote ? `<blockquote class="quote"><p>“${esc(p.quote.text)}”</p><cite>${esc(p.quote.who)}</cite></blockquote>` : '';
-    const nav = `<nav class="case__nav" aria-label="Chapters"><button data-jump="overview">Overview</button>${p.chapters.map(c => `<button data-jump="${c.id}">${esc(c.title)}</button>`).join('')}</nav>`;
+    const nav = `<nav class="case__nav" aria-label="Chapters"><div class="case__nav-track">
+      <button data-jump="overview"><span class="n">00</span>Overview</button>
+      ${p.chapters.map((c, i) => `<button data-jump="${c.id}"${c.highlight ? ' class="is-hl"' : ''}><span class="n">${c.highlight ? '★' : String(i + 1).padStart(2, '0')}</span>${esc(c.title)}</button>`).join('')}
+    </div></nav>`;
+    const hl = p.chapters.find(c => c.highlight);
+    const callout = hl ? `<button class="callout" data-jump="${hl.id}"><span class="callout__tag">★ Start here</span><span class="callout__title">${esc(hl.title)}</span><span class="callout__text">${esc(hl.teaser || hl.kicker || '')}</span><span class="callout__go">Read →</span></button>` : '';
     const chapters = p.chapters.map((c, i) => `
-      <section class="chapter" id="ch-${p.id}-${c.id}">
+      <section class="chapter${c.highlight ? ' chapter--hl' : ''}" id="ch-${p.id}-${c.id}">
         <header class="chapter__head"><span class="chapter__no">${String(i + 1).padStart(2, '0')}</span><div><h3>${esc(c.title)}</h3>${c.kicker ? `<p>${esc(c.kicker)}</p>` : ''}</div></header>
         ${c.text ? `<p class="chapter__text">${esc(c.text)}</p>` : ''}
         ${c.list ? `<ul class="dash-list chapter__list">${c.list.map(l => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}
@@ -302,6 +307,7 @@
       <header class="case__head"><div><h2>${esc(p.title)}</h2><p>${esc(p.subtitle)}</p></div><dl class="kv"><dt>Type</dt><dd>${esc(p.type)}</dd><dt>Client</dt><dd>${esc(p.client)}</dd></dl></header>
       ${nav}
       <section class="chapter chapter--overview" id="ch-${p.id}-overview">
+        ${callout}
         ${facts}
         <div class="case__intro">
           ${p.problem ? `<p class="lead"><b>The problem.</b> ${esc(p.problem)}</p>` : ''}
@@ -317,14 +323,18 @@
     const scroller = $('.case', win);
     $$('[data-jump]', win).forEach(b => b.addEventListener('click', () => {
       const t = $(`#ch-${p.id}-${b.dataset.jump}`, win);
-      if (t) scroller.scrollTo({ top: t.offsetTop - 56, behavior: 'smooth' });
+      if (t) scroller.scrollTo({ top: t.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop - 70, behavior: 'smooth' });
     }));
     // highlight current chapter in the nav
     const secs = $$('.chapter', win);
     scroller.addEventListener('scroll', () => {
       let cur = secs[0];
-      secs.forEach(s => { if (s.offsetTop - 80 <= scroller.scrollTop) cur = s; });
-      $$('[data-jump]', win).forEach(b => b.classList.toggle('is-on', cur.id.endsWith('-' + b.dataset.jump)));
+      const top0 = scroller.getBoundingClientRect().top; secs.forEach(s => { if (s.getBoundingClientRect().top - top0 <= 140) cur = s; });
+      $$('.case__nav [data-jump]', win).forEach(b => {
+        const on = cur.id.endsWith('-' + b.dataset.jump);
+        if (on && !b.classList.contains('is-on')) { const tr = b.parentElement; tr.scrollTo({ left: b.offsetLeft - (tr.clientWidth - b.offsetWidth) / 2, behavior: 'smooth' }); }
+        b.classList.toggle('is-on', on);
+      });
     }, { passive: true });
     if (chapter) {
       const go = () => { const t = $(`#ch-${p.id}-${chapter}`, win); if (t) scroller.scrollTop = t.offsetTop - 56; };
