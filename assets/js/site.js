@@ -245,8 +245,10 @@
     if (p.kind === 'cinematic') {
       body = `${head}
         <div class="video"><iframe src="https://player.vimeo.com/video/${p.vimeo}?title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="${esc(p.title)}"></iframe></div>
-        ${details('Details', meta)}
+        ${details('Details', p.production ? meta.replace('</dl>', `<dt>Production:</dt><dd>${esc(p.production)}</dd></dl>`) : meta)}
         ${details('About', `<div class="info-text"><p>${esc(p.text)}</p></div>`)}
+        ${p.role ? details('My role', list(p.role)) : ''}
+        ${p.tools ? details('Tools', `<div class="tags">${p.tools.map(t => `<span>${esc(t)}</span>`).join('')}</div>`) : ''}
         <p class="rights">Produced for Czech Video Center (Fameplay) as a freelancer. All rights belong to Czech Video Center a.s.</p>`;
     } else {
       const imgs = p.images.map((im, i) => {
