@@ -433,3 +433,8 @@ img { display: block; max-width: 100%; }
   .g--half { grid-column: span 2; }
   .g--third { grid-column: span 1; }
 }
+
+.step { margin-top: 26px; padding-left: 34px; border-left: 2px solid rgba(15,88,61,.25); margin-left: 6px; }
+.step h4 { font-size: 15px; font-weight: 700; letter-spacing: -.005em; }
+.step .chapter__text, .step .chapter__list { margin-left: 0; }
+@media (max-width: 760px) { .step { padding-left: 14px; margin-left: 0; } }

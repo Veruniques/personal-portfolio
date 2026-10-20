@@ -275,12 +275,6 @@ window.NOROLL = {
           "title": "Fare Families",
           "kicker": "Airline partnerships, end-to-end ownership",
           "text": "Kiwi.com started selling airlines’ own fare families (Light, Standard, Flex…) for Air France-KLM, Lufthansa and Virgin Atlantic. Each airline has different rules for bags, seats, changes and refunds. My project from the first sketch to handoff: phase 1 desktop MVP, then responsive and native, including the parts nobody wants to design: refunds, assisted refunds, changes that can’t be done automatically, and the customer-service tool.",
-          "list": [
-            "Baggage allowance and seat-map states come from the fare attributes, so the UI never promises what the ticket doesn’t include",
-            "Fare conditions tested as a modal vs a dedicated page vs FAQ. Short version in the flow, full airline text one tap away",
-            "Recommended fare: two scenarios, five variants",
-            "Kept “search for a new trip” as the main post-booking path where data showed high conversion back to search"
-          ],
           "images": [
             {
               "src": "assets/img/work/kiwi-ff-desktop.jpg",
@@ -316,6 +310,98 @@ window.NOROLL = {
               "h": 888,
               "alt": "Refunds, price breakdown and checkout",
               "size": "full"
+            }
+          ]
+        },
+        {
+          "id": "decision",
+          "title": "Decision story",
+          "kicker": "Fare Families: one problem, the options, and why",
+          "text": "The rest of this case shows breadth. This one shows how I think. One feature, from the ticket to the critique to what we took forward.",
+          "steps": [
+            {
+              "title": "1 · The brief",
+              "text": "August 2023. Ticket DAR-4534, assigned to me, priority highest: prototype the Fare Families use cases so the team understands the flow and its impact before anyone commits engineering time. Airlines were about to sell their own fares through us, and nobody had drawn what that does to a booking that already has bags, seats, Guarantee and service packages in it.",
+              "images": [
+                {
+                  "src": "assets/img/work/ds-brief.jpg",
+                  "w": 1200,
+                  "h": 942,
+                  "alt": "Jira ticket DAR-4534 Fare Families, assigned to Veronika Dominiková, priority highest",
+                  "size": "half"
+                }
+              ]
+            },
+            {
+              "title": "2 · Look outside first",
+              "text": "Before touching our flow I benchmarked how airlines and other booking sites present fare families. Two patterns kept coming back: a column table with ticks, where the middle option does the selling, and a nudge to upgrade right before checkout. Cabin tabs and photo-heavy layouts looked great and explained nothing.",
+              "images": [
+                {
+                  "src": "assets/img/work/ds-benchmark.jpg",
+                  "w": 1848,
+                  "h": 762,
+                  "alt": "Benchmark of airline and OTA fare family screens",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "title": "3 · The hard part: fare conditions",
+              "text": "Fare rules are legal text, different for every airline, and people need them before they pay, not after. Three options on the table: a modal on the overview step, a dedicated conditions page, or an FAQ article with the full airline text. I prototyped the modal in several states, from a short summary to the full rules, and took all three to design critique on 23 January 2024.",
+              "images": [
+                {
+                  "src": "assets/img/work/ds-tc-variants.jpg",
+                  "w": 1540,
+                  "h": 987,
+                  "alt": "Fare conditions modal: summary and full-rules states",
+                  "size": "full"
+                },
+                {
+                  "src": "assets/img/work/ds-critique.jpg",
+                  "w": 1712,
+                  "h": 905,
+                  "alt": "Design critique board with fare-conditions variants",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "title": "4 · Recommending a fare",
+              "text": "Two scenarios. Scenario 1: the cheapest fare, or the one that already includes bags. Scenario 2: a higher fare that includes seating. For each, a recommendation at the moment of choice (“Light fare is recommended for your trip”), shown with the same table people had just seen, so the upgrade reads as information, not a trick. Five variants of where and how it appears.",
+              "images": [
+                {
+                  "src": "assets/img/work/ds-scenarios.jpg",
+                  "w": 1860,
+                  "h": 948,
+                  "alt": "Recommended-fare modal in two scenarios: Light and Standard",
+                  "size": "full"
+                },
+                {
+                  "src": "assets/img/work/ds-variants.jpg",
+                  "w": 1848,
+                  "h": 1036,
+                  "alt": "Variants of the fare selection and recommendation states",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "title": "5 · What we took forward",
+              "list": [
+                "Baggage allowance and seat-map states come from the fare attributes, so the UI never promises what the ticket doesn’t include",
+                "A short summary of conditions in the flow, the full airline text one tap away",
+                "Recommendations tied to what the traveller already picked, not a blanket upsell",
+                "Post-booking: “search for a new trip” kept as the main path where data showed high conversion back to search"
+              ],
+              "images": [
+                {
+                  "src": "assets/img/work/ds-critique-flows.jpg",
+                  "w": 1860,
+                  "h": 595,
+                  "alt": "Flows reviewed in design critique",
+                  "size": "full"
+                }
+              ]
             }
           ]
         },

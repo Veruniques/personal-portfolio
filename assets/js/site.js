@@ -249,7 +249,7 @@
         ${details('About', `<div class="info-text"><p>${esc(p.text)}</p></div>`)}
         ${p.role ? details('My role', list(p.role)) : ''}
         ${p.tools ? details('Tools', `<div class="tags">${p.tools.map(t => `<span>${esc(t)}</span>`).join('')}</div>`) : ''}
-        <p class="rights">Produced for Czech Video Center (Fameplay) as a freelancer. All rights belong to Czech Video Center a.s.</p>`;
+`;
     } else {
       const imgs = p.images.map((im, i) => {
         const o = typeof im === 'string' ? { src: im } : im;
@@ -289,7 +289,13 @@
         <header class="chapter__head"><span class="chapter__no">${String(i + 1).padStart(2, '0')}</span><div><h3>${esc(c.title)}</h3>${c.kicker ? `<p>${esc(c.kicker)}</p>` : ''}</div></header>
         ${c.text ? `<p class="chapter__text">${esc(c.text)}</p>` : ''}
         ${c.list ? `<ul class="dash-list chapter__list">${c.list.map(l => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}
-        <div class="gallery">${c.images.map(fig).join('')}</div>
+        ${c.images ? `<div class="gallery">${c.images.map(fig).join('')}</div>` : ''}
+        ${c.steps ? c.steps.map(st => `<div class="step">
+          <h4>${esc(st.title)}</h4>
+          ${st.text ? `<p class="chapter__text">${esc(st.text)}</p>` : ''}
+          ${st.list ? `<ul class="dash-list chapter__list">${st.list.map(l => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}
+          ${st.images ? `<div class="gallery">${st.images.map(fig).join('')}</div>` : ''}
+        </div>`).join('') : ''}
       </section>`).join('');
     const body = `<div class="win__body case">
       ${p.hero ? `<img class="case__hero" src="${p.hero}" alt="${esc(p.heroAlt || p.title)}" data-zoom>` : ''}
@@ -336,7 +342,7 @@
         <small>${kind === 'cinematic' ? 'Video' : 'Case study'}</small>
       </button>`).join('');
     const intro = kind === 'cinematic'
-      ? `<div class="info-text" style="margin-bottom:10px"><p>${esc(D.about.fameplay)}</p></div>`
+      ? `<div class="info-text" style="margin-bottom:10px"><p>${esc(D.about.fameplay)}</p></div><p class="rights" style="margin:0 0 10px">Produced for Czech Video Center (Fameplay) as a freelancer. All rights belong to Czech Video Center a.s.</p>`
       : `<div class="info-text" style="margin-bottom:10px"><p>Product design lead with a decade around products: design teams, research, design systems and the stubborn bits between business and engineering. Hundreds of screens for Kiwi.com, Keboola and PFLB, plus brands on the side.</p></div>`;
     const win = createWindow({
       key: 'folder-' + kind,
